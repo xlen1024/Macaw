@@ -18,6 +18,7 @@ class MTouchEvent: Hashable {
     }
 }
 
+@MainActor
 protocol Touchable {
     func mTouchesBegan(_ touches: Set<MTouch>, with event: MEvent?)
     func mTouchesMoved(_ touches: Set<MTouch>, with event: MEvent?)

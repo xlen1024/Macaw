@@ -1,4 +1,4 @@
-open class Align {
+open class Align: @unchecked Sendable {
 
     public static let min: Align = Align()
     public static let mid: Align = MidAlign()
@@ -14,14 +14,14 @@ open class Align {
 
 }
 
-private class MidAlign: Align {
+private class MidAlign: Align, @unchecked Sendable {
 
     override func align(outer: Double, inner: Double) -> Double {
         return (outer - inner) / 2
     }
 }
 
-private class MaxAlign: Align {
+private class MaxAlign: Align, @unchecked Sendable {
 
     override func align(outer: Double, inner: Double) -> Double {
         return outer - inner

@@ -1,6 +1,6 @@
 import Foundation
 
-public final class Transform {
+public final class Transform: Sendable {
 
     public let m11: Double
     public let m12: Double

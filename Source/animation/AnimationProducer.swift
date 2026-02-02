@@ -6,9 +6,9 @@ import UIKit
 import AppKit
 #endif
 
-let animationProducer = AnimationProducer()
+nonisolated(unsafe) let animationProducer = AnimationProducer()
 
-class AnimationProducer {
+class AnimationProducer: @unchecked Sendable {
 
     var storedAnimations = [Node: BasicAnimation]() // is used to make sure node is in view hierarchy before actually creating the animation
     var delayedAnimations = [BasicAnimation: Timer]()
@@ -260,9 +260,11 @@ class AnimationProducer {
 
         if displayLink == nil {
             displayLink = MDisplayLink()
+            let capturedContext = context
             displayLink?.startUpdates { [weak self] in
+                nonisolated(unsafe) let weakSelf = self
                 DispatchQueue.main.async {
-                    self?.updateContentAnimations(context)
+                    weakSelf?.updateContentAnimations(capturedContext)
                 }
             }
         }
@@ -330,7 +332,7 @@ class AnimationProducer {
     }
 }
 
-class AnimationContext {
+class AnimationContext: @unchecked Sendable {
 
     var rootTransform: Transform?
 

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild -list -project Macaw.xcodeproj)",
+      "Bash(swift test:*)",
+      "Bash(swift build)",
+      "Bash(grep:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

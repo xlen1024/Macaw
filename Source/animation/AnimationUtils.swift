@@ -37,5 +37,5 @@ class AbsoluteUtils {
         return .none
     }
 
-    private static var indexCache = [Node: Int]()
+    private nonisolated(unsafe) static var indexCache = [Node: Int]()
 }

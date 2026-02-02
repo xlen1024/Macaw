@@ -1,4 +1,4 @@
-open class Locus: Equatable {
+open class Locus: Equatable, @unchecked Sendable {
 
     public init() {
     }

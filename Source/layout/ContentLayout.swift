@@ -12,7 +12,7 @@ import UIKit
 import AppKit
 #endif
 
-open class ContentLayout {
+open class ContentLayout: @unchecked Sendable {
 
     public static let none: ContentLayout = NoneLayout()
 
@@ -66,11 +66,11 @@ open class ContentLayout {
 
 }
 
-class NoneLayout: ContentLayout {
+class NoneLayout: ContentLayout, @unchecked Sendable {
 
 }
 
-class ScalingContentLayout: ContentLayout {
+class ScalingContentLayout: ContentLayout, @unchecked Sendable {
 
     let scaling: AspectRatio
     let xAlign: Align

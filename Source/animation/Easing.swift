@@ -12,7 +12,7 @@ import UIKit
 import AppKit
 #endif
 
-open class Easing {
+open class Easing: @unchecked Sendable {
 
     public static let ease: Easing = Easing()
     public static let linear: Easing = Easing()
@@ -34,19 +34,19 @@ open class Easing {
     }
 }
 
-private class EaseIn: Easing {
+private class EaseIn: Easing, @unchecked Sendable {
     override open func progressFor(time t: Double) -> Double {
         return t * t
     }
 }
 
-private class EaseOut: Easing {
+private class EaseOut: Easing, @unchecked Sendable {
     override open func progressFor(time t: Double) -> Double {
         return -(t * (t - 2))
     }
 }
 
-private class EaseInOut: Easing {
+private class EaseInOut: Easing, @unchecked Sendable {
     override open func progressFor(time t: Double) -> Double {
         if t < 0.5 {
             return 2.0 * t * t
@@ -56,7 +56,7 @@ private class EaseInOut: Easing {
     }
 }
 
-public class ElasticOut: Easing {
+public class ElasticOut: Easing, @unchecked Sendable {
     let elasticity: Double
 
     init(elasticity: Double = 10.0) { // less elasticity means more springy effect
@@ -79,7 +79,7 @@ public class ElasticOut: Easing {
     }
 }
 
-public class ElasticInOut: Easing {
+public class ElasticInOut: Easing, @unchecked Sendable {
     let elasticity: Double
 
     init(elasticity: Double = 10.0) { // less elasticity means more springy effect

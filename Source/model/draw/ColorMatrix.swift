@@ -7,7 +7,7 @@
 //
 import Foundation
 
-open class ColorMatrix {
+open class ColorMatrix: @unchecked Sendable {
 
     public static let identity = ColorMatrix(
         values: [1, 0, 0, 0, 0,

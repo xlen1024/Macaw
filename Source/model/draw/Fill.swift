@@ -1,4 +1,4 @@
-open class Fill: Equatable {
+open class Fill: Equatable, @unchecked Sendable {
 
     public init() {
     }

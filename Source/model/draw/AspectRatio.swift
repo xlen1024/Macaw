@@ -1,4 +1,4 @@
-open class AspectRatio {
+open class AspectRatio: @unchecked Sendable {
 
     public static let none: AspectRatio = AspectRatio()
     public static let meet: AspectRatio = MeetAspectRatio()
@@ -19,14 +19,14 @@ open class AspectRatio {
 
 }
 
-internal class DoNothingAspectRatio: AspectRatio {
+internal class DoNothingAspectRatio: AspectRatio, @unchecked Sendable {
 
     override func fit(size: Size, into sizeToFitIn: Size) -> Size {
         return size
     }
 }
 
-private class MeetAspectRatio: AspectRatio {
+private class MeetAspectRatio: AspectRatio, @unchecked Sendable {
 
     override func fit(size: Size, into sizeToFitIn: Size) -> Size {
         let widthRatio = sizeToFitIn.w / size.w
@@ -40,7 +40,7 @@ private class MeetAspectRatio: AspectRatio {
     }
 }
 
-private class SliceAspectRatio: AspectRatio {
+private class SliceAspectRatio: AspectRatio, @unchecked Sendable {
 
     override func fit(size: Size, into sizeToFitIn: Size) -> Size {
         let widthRatio = sizeToFitIn.w / size.w

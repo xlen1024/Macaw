@@ -1,6 +1,6 @@
 import Foundation
 
-open class Size {
+open class Size: @unchecked Sendable {
 
     public let w: Double
     public let h: Double
