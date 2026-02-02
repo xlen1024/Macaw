@@ -708,6 +708,24 @@ open class SVGParser {
             let x = Array(cleanedHexString)
             cleanedHexString = "\(x[0])\(x[0])\(x[1])\(x[1])\(x[2])\(x[2])"
         }
+
+        // Handle 8-digit hex with alpha: #RRGGBBAA
+        if cleanedHexString.count == 8 {
+            var rgbaValue: UInt32 = 0
+            if #available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *), let scannedInt = Scanner(string: cleanedHexString).scanUInt64(representation: .hexadecimal) {
+                rgbaValue = UInt32(scannedInt)
+            } else {
+                Scanner(string: cleanedHexString).scanHexInt32(&rgbaValue)
+            }
+
+            let red = CGFloat((rgbaValue >> 24) & 0xff)
+            let green = CGFloat((rgbaValue >> 16) & 0xff)
+            let blue = CGFloat((rgbaValue >> 8) & 0xff)
+            let alpha = CGFloat(rgbaValue & 0xff) / 255.0
+
+            return Color.rgba(r: Int(red), g: Int(green), b: Int(blue), a: Double(alpha) * opacity)
+        }
+
         var rgbValue: UInt32 = 0
         if #available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *), let scannedInt = Scanner(string: cleanedHexString).scanUInt64(representation: .hexadecimal) {
             rgbValue = UInt32(scannedInt)
