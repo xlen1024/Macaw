@@ -14,6 +14,7 @@ import UIKit
 import AppKit
 #endif
 
+@MainActor
 open class MacawZoom {
 
     private unowned let view: MacawView
@@ -141,6 +142,7 @@ fileprivate class TouchData {
     let touch: MTouch
     let point: Point
 
+    @MainActor
     convenience init(touch: MTouch, in view: MacawView) {
         self.init(touch: touch, point: touch.location(in: view).toMacaw())
     }
@@ -150,6 +152,7 @@ fileprivate class TouchData {
         self.point = point
     }
 
+    @MainActor
     func current(in view: MacawView) -> Point {
         return touch.location(in: view).toMacaw()
     }

@@ -679,6 +679,7 @@ class LayoutHelper {
     private var prevRect: Rect?
     private var prevTransform: Transform?
 
+    @MainActor
     public func getTransform(_ nodeRenderer: NodeRenderer, _ layout: ContentLayout, _ size: Size) -> Transform {
         setSize(size: size)
         let node = nodeRenderer.node
