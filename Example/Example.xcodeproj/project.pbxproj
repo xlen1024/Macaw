@@ -19,13 +19,13 @@
 		5B195EAD2276D5C40008AE8B /* AnimationsHierarchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B195EAB2276D5C40008AE8B /* AnimationsHierarchyViewController.swift */; };
 		5B5B393B2481094200753058 /* PathAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B393A2481094200753058 /* PathAnimationView.swift */; };
 		5BAE3CB120C54E3D006BEF51 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE3CB020C54E3D006BEF51 /* FiltersViewController.swift */; };
-		66AE19DB1CC8CB3C00B78B5E /* tiger.svg in Resources */ = {isa = PBXBuildFile; fileRef = 66AE19DA1CC8CB3C00B78B5E /* tiger.svg */; };
 		B02E75F11C16104900D1971D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02E75F01C16104900D1971D /* AppDelegate.swift */; };
 		B02E75F61C16104900D1971D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02E75F41C16104900D1971D /* Main.storyboard */; };
 		B02E75F81C16104900D1971D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02E75F71C16104900D1971D /* Assets.xcassets */; };
 		B02E75FB1C16104900D1971D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02E75F91C16104900D1971D /* LaunchScreen.storyboard */; };
 		B04416FA1E041A420016BC50 /* EasingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04416F91E041A420016BC50 /* EasingView.swift */; };
 		B04416FC1E04282A0016BC50 /* EasingExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04416FB1E04282A0016BC50 /* EasingExampleController.swift */; };
+		B33841262F308C2600BCD825 /* tiger.svg in Resources */ = {isa = PBXBuildFile; fileRef = B33841252F308C2600BCD825 /* tiger.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,7 +55,6 @@
 		5B195EAB2276D5C40008AE8B /* AnimationsHierarchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsHierarchyViewController.swift; sourceTree = "<group>"; };
 		5B5B393A2481094200753058 /* PathAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathAnimationView.swift; sourceTree = "<group>"; };
 		5BAE3CB020C54E3D006BEF51 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
-		66AE19DA1CC8CB3C00B78B5E /* tiger.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tiger.svg; path = Example/Assets/SVG/tiger.svg; sourceTree = "<group>"; };
 		B02E75ED1C16104900D1971D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02E75F01C16104900D1971D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B02E75F51C16104900D1971D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		B04416F91E041A420016BC50 /* EasingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingView.swift; sourceTree = "<group>"; };
 		B04416FB1E04282A0016BC50 /* EasingExampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingExampleController.swift; sourceTree = "<group>"; };
 		B1435E8977BA0B9A49C4E399 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B33841252F308C2600BCD825 /* tiger.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = tiger.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 		66AE19D91CC8CAB600B78B5E /* SVG */ = {
 			isa = PBXGroup;
 			children = (
-				66AE19DA1CC8CB3C00B78B5E /* tiger.svg */,
+				B33841252F308C2600BCD825 /* tiger.svg */,
 			);
 			name = SVG;
 			sourceTree = "<group>";
@@ -309,9 +309,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33841262F308C2600BCD825 /* tiger.svg in Resources */,
 				B02E75FB1C16104900D1971D /* LaunchScreen.storyboard in Resources */,
 				B02E75F81C16104900D1971D /* Assets.xcassets in Resources */,
-				66AE19DB1CC8CB3C00B78B5E /* tiger.svg in Resources */,
 				B02E75F61C16104900D1971D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
