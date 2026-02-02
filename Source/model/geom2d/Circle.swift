@@ -1,4 +1,4 @@
-open class Circle: Locus {
+open class Circle: Locus, @unchecked Sendable {
 
     public let cx: Double
     public let cy: Double

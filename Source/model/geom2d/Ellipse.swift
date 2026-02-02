@@ -1,4 +1,4 @@
-open class Ellipse: Locus {
+open class Ellipse: Locus, @unchecked Sendable {
 
     public let cx: Double
     public let cy: Double

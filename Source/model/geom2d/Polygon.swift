@@ -1,6 +1,6 @@
 import Foundation
 
-open class Polygon: Locus {
+open class Polygon: Locus, @unchecked Sendable {
 
     public let points: [Double]
 

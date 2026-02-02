@@ -1,4 +1,4 @@
-open class Pattern: Fill {
+open class Pattern: Fill, @unchecked Sendable {
 
     public let content: Node
     public let bounds: Rect

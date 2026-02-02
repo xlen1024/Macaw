@@ -1,4 +1,4 @@
-open class Gradient: Fill {
+open class Gradient: Fill, @unchecked Sendable {
 
     public let userSpace: Bool
     public let stops: [Stop]

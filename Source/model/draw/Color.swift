@@ -1,4 +1,4 @@
-open class Color: Fill {
+open class Color: Fill, @unchecked Sendable {
 
     public let val: Int
 

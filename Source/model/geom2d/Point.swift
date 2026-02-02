@@ -1,6 +1,6 @@
 import Foundation
 
-open class Point: Locus {
+open class Point: Locus, @unchecked Sendable {
 
     public let x: Double
     public let y: Double

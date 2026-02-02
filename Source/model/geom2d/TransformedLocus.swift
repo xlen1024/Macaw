@@ -5,7 +5,7 @@
 //  Created by Yuri Strot on 5/21/18.
 //
 
-open class TransformedLocus: Locus {
+open class TransformedLocus: Locus, @unchecked Sendable {
 
     public let locus: Locus
     public let transform: Transform

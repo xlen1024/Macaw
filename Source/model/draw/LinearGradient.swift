@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 #endif
 
-open class LinearGradient: Gradient {
+open class LinearGradient: Gradient, @unchecked Sendable {
 
     public let x1: Double
     public let y1: Double

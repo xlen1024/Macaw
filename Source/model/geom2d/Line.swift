@@ -1,4 +1,4 @@
-open class Line: Locus {
+open class Line: Locus, @unchecked Sendable {
 
     public let x1: Double
     public let y1: Double

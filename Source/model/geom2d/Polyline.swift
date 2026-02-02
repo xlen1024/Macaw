@@ -1,6 +1,6 @@
 import Foundation
 
-open class Polyline: Locus {
+open class Polyline: Locus, @unchecked Sendable {
 
     public let points: [Double]
 

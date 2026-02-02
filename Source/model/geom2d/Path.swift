@@ -2,7 +2,7 @@ public enum FillRule {
     case nonzero, evenodd
 }
 
-open class Path: Locus {
+open class Path: Locus, @unchecked Sendable {
 
     public let segments: [PathSegment]
     public let fillRule: FillRule

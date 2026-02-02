@@ -1,6 +1,6 @@
 import Foundation
 
-open class Arc: Locus {
+open class Arc: Locus, @unchecked Sendable {
 
     public let ellipse: Ellipse
     public let shift: Double

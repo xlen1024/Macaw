@@ -1,4 +1,4 @@
-open class RoundRect: Locus {
+open class RoundRect: Locus, @unchecked Sendable {
 
     public let rect: Rect
     public let rx: Double

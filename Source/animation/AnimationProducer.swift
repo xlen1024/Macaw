@@ -6,7 +6,7 @@ import UIKit
 import AppKit
 #endif
 
-nonisolated(unsafe) let animationProducer = AnimationProducer()
+let animationProducer = AnimationProducer()
 
 class AnimationProducer: @unchecked Sendable {
 

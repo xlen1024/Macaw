@@ -1,4 +1,4 @@
-open class RadialGradient: Gradient {
+open class RadialGradient: Gradient, @unchecked Sendable {
 
     public let cx: Double
     public let cy: Double
